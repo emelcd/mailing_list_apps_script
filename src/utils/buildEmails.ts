@@ -1,3 +1,3 @@
-export const mapUsernames = (username: string) => {
-  return `${username}@gmail.com`;
+export const mapUsernames = (username: string, domain: string = 'gmail.com') => {
+  return `${username}@${domain}`
 }
