@@ -6,7 +6,7 @@ export const SHEET_LOGGER = SPREADSHEET.getSheetByName('Logger')!
 
 export const TEMPLATE_EMAIL_HTML = `
 <html>
-  <body>
+  <body style="font-family: 'Courier New', Courier, monospace">
     <table
       style="border: 1px solid gray; width: 600px; border-collapse: collapse"
     >
@@ -15,7 +15,7 @@ export const TEMPLATE_EMAIL_HTML = `
           align="center"
           style="border: 1px solid gray; background: whitesmoke; padding: 10px"
         >
-          <h1>Hello, <span style="color: #ff0000">{{username}}</span>!</h1>
+          <h1>Ey, <span style="color: #ff0000">{{username}}</span>!</h1>
         </th>
       </tr>
       <tr>
@@ -35,18 +35,22 @@ export const TEMPLATE_EMAIL_HTML = `
       </tr>
       <tr>
         <td style="padding: 10px">
-          <p>
-            {{videoDescription}}
-          </p>
+          <p>{{videoDescription}}</p>
           <hr />
           <p>
             <strong>Disclaimer:</strong> This is an automated email. Please do
-            not reply to this email.
+            not reply to this email. 
+            <hr>
+            <code>
+              If you want to know how this script is
+              built check the <a href="https://github.com/emelcd/mailing_list_apps_script">source code</a>.
+            </code>
           </p>
         </td>
       </tr>
     </table>
   </body>
 </html>
+
 
 `

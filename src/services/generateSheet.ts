@@ -1,6 +1,6 @@
-const createSpreadsheet = () => {
+const createSpreadsheet = (name: string = "EMAIL_LIST") => {
   // Create a new spreadsheet
-  const spreadsheet = SpreadsheetApp.create('Your Spreadsheet Name');
+  const spreadsheet = SpreadsheetApp.create(name);
 
   // Add sheets to the spreadsheet
   const usernamesSh = spreadsheet.insertSheet('Usernames');
@@ -17,7 +17,7 @@ const createSpreadsheet = () => {
   spreadsheet.deleteSheet(spreadsheet.getSheetByName('Sheet1')!);
   // Log the URL of the newly created spreadsheet
   Logger.log('Spreadsheet URL: ' + spreadsheet.getUrl());
-  Logger.log('Copy this in the TOP: ' + spreadsheet.getId());
+  Logger.log('Copy this in the src/utils/constants.ts: ' + spreadsheet.getId());
 }
 
 export default createSpreadsheet

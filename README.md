@@ -1,14 +1,15 @@
-# Project Name
+# Email List Apps Script
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Description
 
-Brief description of your project goes here.
+A mail list app script built with Google Apps Script. It uses Google Sheets as a database and Gmail to send emails.
 
 ## Table of Contents
 
 - [Installation](#installation)
+- [Development](#development)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -26,13 +27,19 @@ Brief description of your project goes here.
    ```
 
 2. Run `npm/yarn/pnpm run build` to build the project.
-3. Copy the contents of `dist/main.js` into your Google Apps Script project.
+
+## Development
+
+I use LiveServer to edit the template, it's inside utils/index.html. Edit and copy to constants.ts TEMPLATE_EMAIL_HTML variable.
 
 ## Usage
 
 1. Use the method `createSheet` to create a new sheet with the name of your choice.
-2. Copy the ID of the sheet and paste it into the `SHEET_ID` variable in `src/constants.ts`.
+2. Copy the ID of the sheet and paste it into the `SHEET_ID` variable in `src/utils/constants.ts`.
 3. Fill the sheet with wanted data.
+   - The sheet Usernames is feed with the username of the email. Configured for using `@gmail.com` domain.
+   - The sheet Videos is feed with the video ID of the video you want to send to the user. Configured for YouTube.
+   - The sheet Logger is fill automatically.
 4. Build the project and copy the contents of `build/main.js` into your Google Apps Script project.
 5. Add the function `main` to a time-driven trigger.
 
