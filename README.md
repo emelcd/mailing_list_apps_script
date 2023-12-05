@@ -34,7 +34,7 @@ The script will detect what videos has been sent to the user and will send a ran
 
 I use LiveServer to edit the template, it's inside utils/index.html. Edit and copy to constants.ts TEMPLATE_EMAIL_HTML variable.
 
-No using `clasp` but the `.claspignore` it's configured to deploy only the main.js file.
+No using [`clasp`](https://github.com/google/clasp) but the `.claspignore` it's configured to deploy only the `build/main.js` file.
 
 ## Usage
 
