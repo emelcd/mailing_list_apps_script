@@ -15,7 +15,7 @@ export const TEMPLATE_EMAIL_HTML = `
           align="center"
           style="border: 1px solid gray; background: whitesmoke; padding: 10px"
         >
-          <h1>Ey, <span style="color: #ff0000">{{username}}</span>!</h1>
+          <h1>Ey, <span style="color: #4285F4">{{username}}</span>!</h1>
         </th>
       </tr>
       <tr>

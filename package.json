@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --outfile=build/main.js --format=cjs --target=chrome58 ",
+    "build": "esbuild src/index.ts --bundle --outfile=build/main.js --format=cjs --target=chrome58",
     "watch": "nodemon src/index.ts"
   },
   "keywords": [],

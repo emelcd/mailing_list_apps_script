@@ -4,8 +4,8 @@ import getLogger from "../services/getLogger"
 import { getUsernames } from "../services/getUsernames"
 import { getVideos } from "../services/getVideos"
 import writeToLogger from "../services/writeToLogger"
-import { mapUsernames } from "../utils/buildEmails"
-import { mapHTMLTemplate } from "../utils/buildTemplateHTML"
+import { usernameToEmail } from "../utils/addDomain"
+import { generateHTMLTemplate } from "../utils/htmlGenerator"
 
 class MailBuilder {
   private usernames: string[]
@@ -20,7 +20,7 @@ class MailBuilder {
 
 
   private generateMail = (username: string, videoId: string, videoDescription: string) => {
-    return mapHTMLTemplate(username, videoId, videoDescription)
+    return generateHTMLTemplate(username, videoId, videoDescription)
   }
 
   private unsentVideos = (username: string) => {
@@ -59,7 +59,7 @@ class MailBuilder {
       const videoDescription = this.videos.find(([id]) => id === videoId)?.[1] || 'No description'
       this.logVideos(username, videoId)
       const mail = this.generateMail(username, videoId, videoDescription)
-      GmailApp.sendEmail(mapUsernames(username), 'Ey', '', { htmlBody: mail })
+      GmailApp.sendEmail(usernameToEmail(username), 'Ey', '', { htmlBody: mail })
       Logger.log(`Email sent to ${username}`)
 
     })

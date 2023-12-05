@@ -8,7 +8,8 @@ const writeToLogger = (logData: LoggerVideos[]) => {
   })
   SHEET_LOGGER.getRange('A2:B').clearContent()
   SHEET_LOGGER.getRange(2, 1, formatDate.length, 2).setValues(formatDate)
-  console.log('Logger updated')
+
+  console.log('Logger updated' + new Date() + ' ' + SHEET_LOGGER.getParent().getUrl())
 }
 
 export default writeToLogger
