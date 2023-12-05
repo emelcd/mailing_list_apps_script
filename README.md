@@ -44,7 +44,7 @@ No using [`clasp`](https://github.com/google/clasp) but the `.claspignore` it's 
    - The sheet Usernames is feed with the username of the email. Configured for using `@gmail.com` domain.
    - The sheet Videos is feed with the video ID of the video you want to send to the user. Configured for YouTube.
    - The sheet Logger is fill automatically.
-4. Create a new GAS project
+4. Create a new [GAS](https://script.new/) project
 5. Build the project and copy the contents of `build/main.js` into your Google Apps Script project. Delete the `main()` function at the end of the file(THIS IS NECCESARY BECAUSE USING esbuild).
 6. (OPTIONAL) Add the function `main` to a time-driven trigger.
 
