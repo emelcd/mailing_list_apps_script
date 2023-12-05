@@ -6,6 +6,8 @@
 
 A mail list app script built with Google Apps Script. It uses Google Sheets as a database and Gmail to send emails.
 
+The script will detect what videos has been sent to the user and will send a random video from the list. If the user has seen all the videos, it will not send any email.
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -32,6 +34,8 @@ A mail list app script built with Google Apps Script. It uses Google Sheets as a
 
 I use LiveServer to edit the template, it's inside utils/index.html. Edit and copy to constants.ts TEMPLATE_EMAIL_HTML variable.
 
+No using `clasp` but the `.claspignore` it's configured to deploy only the main.js file.
+
 ## Usage
 
 1. Use the method `createSheet` to create a new sheet with the name of your choice.
@@ -41,11 +45,7 @@ I use LiveServer to edit the template, it's inside utils/index.html. Edit and co
    - The sheet Videos is feed with the video ID of the video you want to send to the user. Configured for YouTube.
    - The sheet Logger is fill automatically.
 4. Build the project and copy the contents of `build/main.js` into your Google Apps Script project.
-5. Add the function `main` to a time-driven trigger.
-
-## Contributing
-
-Contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+5. (OPTIONAL) Add the function `main` to a time-driven trigger.
 
 ## License
 
