@@ -45,10 +45,11 @@ export const TEMPLATE_EMAIL_HTML = `
             </code>
           </p>
           <!-- add copyrigth -->
-          <footer style="font-size: 10px; text-align: right; margin-top: 20px; padding: 0px">
-            <p>&copy; 2023 <a href="https://github.com/emelcd">emelcd</a>. All rights reserved.
+            <p
+              style="font-size: 8px; text-align: right; color: gray"
+            
+            >&copy; 2023 <a href="https://github.com/emelcd">emelcd</a>. All rights reserved.
             </p>
-        </footer>
         </td>
       </tr>
     </table>
