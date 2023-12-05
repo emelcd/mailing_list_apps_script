@@ -5,10 +5,10 @@ const createSpreadsheet = (name: string = "EMAIL_LIST") => {
   // Add sheets to the spreadsheet
   const usernamesSh = spreadsheet.insertSheet('Usernames');
   usernamesSh.appendRow(['Username']);
-  usernamesSh.appendRow(['mick.altura']);
+  usernamesSh.appendRow(['emailadress']);
   const videosSH = spreadsheet.insertSheet('Videos');
   videosSH.appendRow(['Video ID', 'Video Description']);
-  videosSH.appendRow(['Q2cTbsXYu6E', 'This is a video description']);
+  videosSH.appendRow(['dQw4w9WgXcQ', 'Best video of all time']);
   const loggerSH = spreadsheet.insertSheet('Logger');
   loggerSH.appendRow(['Username', 'Video IDs']);
 
