@@ -1,11 +1,11 @@
 import { LoggerVideos } from "../interfaces/loggerInterface"
 import createSpreadsheet from "../services/generateSheet"
 import getLogger from "../services/getLogger"
-import { getUsernames } from "../services/getUsernames"
-import { getVideos } from "../services/getVideos"
+import getUsernames from "../services/getUsernames"
+import getVideos from "../services/getVideos"
 import writeToLogger from "../services/writeToLogger"
-import { usernameToEmail } from "../utils/addDomain"
-import { generateHTMLTemplate } from "../utils/htmlGenerator"
+import usernameToEmail from "../utils/addDomain"
+import generateHTMLTemplate from "../utils/htmlGenerator"
 
 class MailBuilder {
   private usernames: string[]
@@ -31,7 +31,7 @@ class MailBuilder {
 
   }
 
-  private logVideos = (username: string, videoId: string) => {
+  private recordLogVideos = (username: string, videoId: string) => {
     const userIndex = this.logged.findIndex(el => el.username === username)
     if (userIndex === -1) {
       this.logged.push({ username, videoIDs: [videoId] })
@@ -41,7 +41,7 @@ class MailBuilder {
 
   }
 
-  private writeSentVideos = () => {
+  private writeToLogger = () => {
     writeToLogger(this.logged)
   }
 
@@ -57,13 +57,13 @@ class MailBuilder {
       if (!unsentVideos.length) return
       const videoId = unsentVideos[Math.floor(Math.random() * unsentVideos.length)]
       const videoDescription = this.videos.find(([id]) => id === videoId)?.[1] || 'No description'
-      this.logVideos(username, videoId)
+      this.recordLogVideos(username, videoId)
       const mail = this.generateMail(username, videoId, videoDescription)
       GmailApp.sendEmail(usernameToEmail(username), 'Ey', '', { htmlBody: mail })
       Logger.log(`Email sent to ${username}`)
 
     })
-    this.writeSentVideos()
+    this.writeToLogger()
   }
 
 }
