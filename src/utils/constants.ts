@@ -1,4 +1,4 @@
-export const SHEET_ID = "1N9J0q-suUPzdGWdBobSroU9-OsDpyiwO5Cp65LEwdog"
+export const SHEET_ID = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms" // added public for test
 export const SPREADSHEET = SpreadsheetApp.openById(SHEET_ID)!
 export const SHEET_NAMES = SPREADSHEET.getSheetByName('Usernames')!
 export const SHEET_VIDEOS = SPREADSHEET.getSheetByName('Videos')!
