@@ -38,7 +38,7 @@ No using [`clasp`](https://github.com/google/clasp) but the `.claspignore` it's 
 
 ## Usage
 
-1. Use the method `createSheet` to create a new sheet with the name of your choice. Or create manually, adding `Usernames`, `Videos` and `Logger` sheets (mandatory).
+1. ~~Use the method `createSheet` to create a new sheet with the name of your choice~~(BUG DETECTED, ONLY IF THE SHEET_ID IS ACCESIBLE). Or create manually, adding `Usernames`, `Videos` and `Logger` sheets (mandatory).
 2. Copy the ID of the sheet and paste it into the `SHEET_ID` variable in `src/utils/constants.ts`.
 3. Fill the sheet with wanted data.
    - The sheet Usernames is feed with the username of the email. Configured for using `@gmail.com` domain.
