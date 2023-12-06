@@ -18,7 +18,7 @@ var createSpreadsheet = (name = "EMAIL_LIST") => {
 var generateSheet_default = createSpreadsheet;
 
 // src/utils/constants.ts
-var SHEET_ID = "1N9J0q-suUPzdGWdBobSroU9-OsDpyiwO5Cp65LEwdog";
+var SHEET_ID = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
 var SPREADSHEET = SpreadsheetApp.openById(SHEET_ID);
 var SHEET_NAMES = SPREADSHEET.getSheetByName("Usernames");
 var SHEET_VIDEOS = SPREADSHEET.getSheetByName("Videos");
